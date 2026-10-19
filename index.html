@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BM Associates provides income tax return filing, GST returns, PAN and passport assistance, MSME registration, accounting services, and business consultancy." />
+  <title>BM Associates | Tax, Accounting & Business Services</title>
+  <style>
+    :root {
+      --navy: #101827;
+      --navy-2: #17243a;
+      --gold: #d7b56d;
+      --gold-light: #f0dba8;
+      --ink: #202938;
+      --muted: #667085;
+      --paper: #f7f8fa;
+      --white: #ffffff;
+      --line: #e5e7eb;
+      --shadow: 0 18px 45px rgba(16, 24, 39, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { background: #0b1220; color: #e8edf5; font-size: .88rem; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; flex-wrap: wrap; }
+    .topbar a:hover { color: var(--gold-light); }
+    header { background: rgba(16, 24, 39, .98); color: white; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 20px rgba(0,0,0,.12); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 210px; }
+    .brand-mark { width: 47px; height: 47px; border: 2px solid var(--gold); border-radius: 12px; display: grid; place-items: center; color: var(--gold-light); font-weight: 900; font-size: 1.05rem; letter-spacing: -1px; }
+    .brand-name { font-weight: 900; font-size: 1.18rem; letter-spacing: .035em; line-height: 1.15; }
+    .brand-name span { display: block; color: var(--gold); font-size: .68rem; font-weight: 600; letter-spacing: .19em; margin-top: 5px; }
+    nav { display: flex; gap: 24px; align-items: center; font-size: .94rem; }
+    nav a { color: #e8edf5; transition: color .2s; }
+    nav a:hover { color: var(--gold-light); }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; padding: 12px 18px; font-weight: 750; transition: transform .2s, background .2s; }
+    .nav-cta, .btn-gold { background: var(--gold); color: #101827; }
+    .nav-cta:hover, .btn:hover { transform: translateY(-2px); }
+    .menu-btn { display: none; color: white; border: 1px solid #526075; background: transparent; border-radius: 7px; padding: 8px 11px; font-size: 1.2rem; }
+    .hero { background: radial-gradient(circle at 80% 20%, rgba(215,181,109,.18), transparent 30%), linear-gradient(130deg, #101827, #1c2b43); color: white; padding: 88px 0 92px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 55px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; text-transform: uppercase; letter-spacing: .17em; color: var(--gold-light); font-size: .77rem; font-weight: 800; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--gold); }
+    h1 { font-size: clamp(2.55rem, 5vw, 4.35rem); line-height: 1.08; letter-spacing: -.045em; margin: 20px 0; }
+    h1 span { color: var(--gold-light); }
+    .hero p { max-width: 620px; color: #d5dce7; font-size: 1.08rem; margin: 0 0 28px; }
+    .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid rgba(255,255,255,.45); color: white; }
+    .btn-outline:hover { background: rgba(255,255,255,.08); }
+    .hero-note { margin-top: 26px; color: #b9c4d4; font-size: .9rem; }
+    .hero-card { border: 1px solid rgba(215,181,109,.42); background: rgba(255,255,255,.055); border-radius: 20px; padding: 30px; box-shadow: 0 25px 60px rgba(0,0,0,.18); backdrop-filter: blur(8px); }
+    .hero-card .mini-label { color: var(--gold-light); text-transform: uppercase; font-weight: 800; letter-spacing: .14em; font-size: .75rem; }
+    .hero-card h2 { margin: 9px 0 20px; font-size: 1.75rem; line-height: 1.2; }
+    .credential { display: flex; gap: 13px; align-items: center; border-top: 1px solid rgba(255,255,255,.12); padding: 14px 0; color: #edf1f7; }
+    .credential-icon { flex: 0 0 36px; height: 36px; border-radius: 9px; background: rgba(215,181,109,.16); display: grid; place-items: center; color: var(--gold-light); font-weight: 900; }
+    .credential strong { display: block; font-size: .96rem; }
+    .credential small { display: block; color: #b9c4d4; }
+    section { padding: 78px 0; }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 42px; }
+    .section-kicker { color: #9b7836; text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 850; }
+    h2.section-title { font-size: clamp(2rem, 3.5vw, 2.8rem); letter-spacing: -.035em; line-height: 1.15; margin: 10px 0 14px; color: var(--navy); }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { background: var(--paper); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: white; padding: 27px; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 24px rgba(16,24,39,.035); transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .service-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; background: #f7f0df; color: #8b6829; font-size: 1.35rem; margin-bottom: 18px; }
+    .service-card h3 { color: var(--navy); font-size: 1.12rem; margin: 0 0 8px; }
+    .service-card p { color: var(--muted); font-size: .94rem; margin: 0; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; align-items: center; }
+    .about-panel { padding: 34px; background: var(--navy); color: white; border-radius: 18px; position: relative; overflow: hidden; }
+    .about-panel::after { content: "BM"; position: absolute; right: -10px; bottom: -58px; font-size: 11rem; line-height: 1; font-weight: 950; color: rgba(255,255,255,.045); }
+    .about-panel .large { color: var(--gold-light); font-size: 2.1rem; font-weight: 900; line-height: 1.1; }
+    .about-panel p { color: #d1d8e3; margin-bottom: 0; }
+    .about-copy h2 { font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.15; color: var(--navy); margin: 12px 0 16px; letter-spacing: -.035em; }
+    .about-copy p { color: var(--muted); }
+    .tick-list { list-style: none; padding: 0; margin: 23px 0 0; display: grid; gap: 12px; }
+    .tick-list li { display: flex; gap: 11px; align-items: flex-start; }
+    .tick { color: #8b6829; font-weight: 900; }
+    .process { background: #fbfaf7; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .step { border: 1px solid #e8e1d2; border-radius: 13px; padding: 24px; background: white; }
+    .step-num { font-weight: 900; color: #9b7836; letter-spacing: .08em; font-size: .8rem; }
+    .step h3 { margin: 8px 0; color: var(--navy); }
+    .step p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .contact { background: var(--navy); color: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact h2 { color: white; font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.15; margin: 10px 0 15px; }
+    .contact-intro { color: #c6d0df; max-width: 510px; }
+    .contact-card { background: white; color: var(--ink); border-radius: 16px; padding: 28px; }
+    .contact-item { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .contact-item:last-child { border-bottom: 0; }
+    .contact-symbol { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 10px; background: #f7f0df; color: #8b6829; font-weight: 900; flex: 0 0 42px; }
+    .contact-item small { display: block; color: var(--muted); margin-bottom: 2px; }
+    .contact-item strong, .contact-item a { overflow-wrap: anywhere; }
+    .contact-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    footer { background: #0b1220; color: #aeb9ca; padding: 23px 0; font-size: .88rem; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .footer-inner strong { color: white; }
+    .disclaimer { font-size: .78rem; color: #8491a4; margin-top: 8px; max-width: 850px; }
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero { padding: 65px 0; }
+      .hero-card { max-width: 550px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      nav { display: none; position: absolute; top: 78px; left: 0; right: 0; background: var(--navy); padding: 20px; flex-direction: column; align-items: stretch; gap: 15px; border-top: 1px solid #29364a; }
+      nav.open { display: flex; }
+      .menu-btn { display: inline-block; }
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .topbar-inner { font-size: .8rem; }
+      .service-grid, .steps { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+      .hero-card, .about-panel, .contact-card { padding: 23px; }
+      .brand-name { font-size: 1.05rem; }
+      .brand-mark { width: 42px; height: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Professional Tax, Accounting & Business Support</span>
+      <span><a href="tel:+918780360430">+91 87803 60430</a> &nbsp;·&nbsp; <a href="mailto:basitmithabha@gmail.com">basitmithabha@gmail.com</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="BM Associates home">
+        <div class="brand-mark">BM</div>
+        <div class="brand-name">BM ASSOCIATES<span>FINANCE · TAX · BUSINESS</span></div>
+      </a>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Get in Touch ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Your trusted business support</div>
+          <h1>Clarity for your <span>taxes.</span><br>Confidence for your business.</h1>
+          <p>Practical support for individuals, professionals and small businesses—from income tax returns and GST compliance to registrations, accounting and business guidance.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#contact">Discuss Your Requirement ↗</a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+          </div>
+          <div class="hero-note">Clear communication · Reliable support · Client-focused service</div>
+        </div>
+        <aside class="hero-card">
+          <div class="mini-label">Meet your consultant</div>
+          <h2>Basit Mithabha</h2>
+          <div class="credential"><div class="credential-icon">CA</div><div><strong>CA Finalist</strong><small>Chartered Accountancy studies</small></div></div>
+          <div class="credential"><div class="credential-icon">B</div><div><strong>B.Com</strong><small>Bachelor of Commerce</small></div></div>
+          <div class="credential"><div class="credential-icon">M</div><div><strong>M.Com</strong><small>Master of Commerce</small></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">What we do</div>
+          <h2 class="section-title">Services built around your needs</h2>
+          <p>One place for everyday tax, documentation, accounting and business support.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">₹</div><h3>Income Tax Return (ITR)</h3><p>Assistance with ITR preparation and filing based on the information and documents provided.</p></article>
+          <article class="service-card"><div class="service-icon">GST</div><h3>GST Returns & Compliance</h3><p>Support for GST return preparation, filing, registrations and routine compliance requirements.</p></article>
+          <article class="service-card"><div class="service-icon">ID</div><h3>PAN Card Services</h3><p>Help with PAN applications, corrections and related documentation.</p></article>
+          <article class="service-card"><div class="service-icon">✈</div><h3>Passport Assistance</h3><p>Guidance with passport application forms, document checklists and application steps.</p></article>
+          <article class="service-card"><div class="service-icon">MS</div><h3>MSME / Udyam Registration</h3><p>Assistance with Udyam registration and understanding the information required for the application.</p></article>
+          <article class="service-card"><div class="service-icon">▤</div><h3>Accounting Services</h3><p>Bookkeeping, transaction recording, account maintenance and basic financial reporting support.</p></article>
+          <article class="service-card"><div class="service-icon">↗</div><h3>Business Consultancy</h3><p>Practical guidance for business setup, compliance planning, documentation and day-to-day business processes.</p></article>
+          <article class="service-card"><div class="service-icon">✓</div><h3>Business Documentation</h3><p>Support in organising business records and understanding common registration and compliance requirements.</p></article>
+          <article class="service-card"><div class="service-icon">◎</div><h3>Personalised Assistance</h3><p>Get a clear checklist and next steps tailored to your requirement before proceeding.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <div class="large">BM<br>Associates</div>
+          <p>Professional support with a personal approach—helping you understand the process, prepare documents and take the next step with confidence.</p>
+        </div>
+        <div class="about-copy">
+          <div class="section-kicker">About BM Associates</div>
+          <h2>Simple processes. Professional support.</h2>
+          <p>BM Associates supports individuals, self-employed professionals and small businesses with tax-related work, registrations, accounting and business documentation.</p>
+          <p>Our focus is on making requirements easier to understand, keeping the process organised and communicating clearly about the information needed.</p>
+          <ul class="tick-list">
+            <li><span class="tick">✓</span><span><strong>Clear guidance</strong> — understand the steps and documents required.</span></li>
+            <li><span class="tick">✓</span><span><strong>Client-focused service</strong> — support based on your specific requirement.</span></li>
+            <li><span class="tick">✓</span><span><strong>Convenient communication</strong> — contact us by phone, email or WhatsApp.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">How it works</div>
+          <h2 class="section-title">A straightforward process</h2>
+          <p>Know what is needed before you begin.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-num">STEP 01</div><h3>Tell us what you need</h3><p>Share your service requirement and any relevant details with BM Associates.</p></article>
+          <article class="step"><div class="step-num">STEP 02</div><h3>Get your document checklist</h3><p>We explain the information and documents generally needed for your request.</p></article>
+          <article class="step"><div class="step-num">STEP 03</div><h3>Proceed with clarity</h3><p>Once the scope, documents, fees and applicable requirements are confirmed, the process can begin.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Let's connect</div>
+          <h2>Have a requirement?<br>Let's discuss it.</h2>
+          <p class="contact-intro">Contact BM Associates for information about services, required documents, timelines and applicable fees.</p>
+          <div class="contact-buttons">
+            <a class="btn btn-gold" href="https://wa.me/918780360430?text=Hello%20BM%20Associates%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">WhatsApp Us ↗</a>
+            <a class="btn btn-outline" href="mailto:basitmithabha@gmail.com">Send an Email</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-item"><div class="contact-symbol">☎</div><div><small>Phone / WhatsApp</small><strong><a href="tel:+918780360430">+91 87803 60430</a></strong></div></div>
+          <div class="contact-item"><div class="contact-symbol">@</div><div><small>Email</small><strong><a href="mailto:basitmithabha@gmail.com">basitmithabha@gmail.com</a></strong></div></div>
+          <div class="contact-item"><div class="contact-symbol">⌖</div><div><small>Location</small><strong>Jamnagar, Gujarat, India</strong><small>Serving clients with convenient remote assistance</small></div></div>
+          <div class="contact-item"><div class="contact-symbol">BM</div><div><small>Contact person</small><strong>Basit Mithabha</strong><small>CA Finalist · B.Com · M.Com</small></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner"><div><strong>BM ASSOCIATES</strong> · Finance, Tax & Business Support</div><div>© <span id="year"></span> BM Associates. All rights reserved.</div></div>
+      <div class="disclaimer">Service descriptions are for general information. Actual scope, eligibility, fees, timelines and filing requirements depend on the applicable rules and the client's circumstances. BM Associates is not represented here as a Chartered Accountancy firm, and no claim of being a Chartered Accountant is made.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
